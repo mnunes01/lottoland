@@ -48,11 +48,11 @@ const Grid = (props) => {
     }, [handleObserver]);   */
     
     return (
-            <div class={style.grid}>
+            <div class={style.grid} role="grid">
                 {
                     props.gameList.map( game => {
                             return(
-                                <div key={`item_${game.gameName}`} class={style.grid__item}>
+                                <div key={`item_${game.gameName}`} class={style.grid__item} role="cell">
                                     <Gamecard 
                                         key={game.gameName}
                                         imagePath={game.imagePath}
