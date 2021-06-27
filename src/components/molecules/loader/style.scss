@@ -1,0 +1,16 @@
+@import "../../../style/core";
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: inherit;
+    
+    @include label_strong;
+    
+    * {
+        padding: $default_margin;
+    }
+}
