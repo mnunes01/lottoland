@@ -129,8 +129,7 @@ const App = () => {
 				/>
 			</div>
 			<div class="filter">
-				<sort-switcher 
-					class={style.top}
+				<sort-switcher
 					options={CONFS.SWITCHER_OPTIONS.filters}
 					title={CONFS.SWITCHER_OPTIONS.title}
 					handleChangeOption={(field, order) => dispatch({type: 'sort', payload: {field, order}})}
