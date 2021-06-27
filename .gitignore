@@ -1,5 +1,4 @@
 .DS_STORE
 size-plugin.json
 node_modules
-/build
 /*.log
