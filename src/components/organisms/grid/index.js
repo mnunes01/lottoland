@@ -6,7 +6,7 @@ import style from './style.scss';
 import Gamecard from "../../molecules/gamecard"
 
 
-function useFetch(query, page, gameList) {
+/* function useFetch(query, page, gameList) {
     
     const [list, setList] = useState([])
     const [hasMore, setHasMore] = useState(false) 
@@ -21,12 +21,12 @@ function useFetch(query, page, gameList) {
     }, [query, sendQuery, page])
   
     return { list };
-}
+} */
 
 
 const Grid = (props) => {
     
-    const [page, setPage] = useState(0);
+    /* const [page, setPage] = useState(0);
     const { list } = useFetch(query, page, chunk(props.gameList, 15));
     const loader = useRef(null);
 
@@ -45,14 +45,14 @@ const Grid = (props) => {
         };
         const observer = new IntersectionObserver(handleObserver, option);
         if (loader.current) observer.observe(loader.current);
-    }, [handleObserver]);  
+    }, [handleObserver]);   */
     
     return (
             <div class={style.grid}>
                 {
                     props.gameList.map( game => {
                             return(
-                                <div class={style.grid__item}>
+                                <div key={`item_${game.gameName}`} class={style.grid__item}>
                                     <Gamecard 
                                         key={game.gameName}
                                         imagePath={game.imagePath}
