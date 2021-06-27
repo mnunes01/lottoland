@@ -19,7 +19,8 @@
     "serve": "sirv build --port 8080 --cors --single",
     "dev": "preact watch",
     "lint": "eslint src",
-    "test": "jest"
+    "test": "jest",
+    "gh-pages": "git subtree push --prefix build origin gh-pages"
   },
   "eslintConfig": {
     "extends": "preact",
