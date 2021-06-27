@@ -6,8 +6,9 @@ import style from './main.scss';
 import CONFS from './configs';
 import static_gameList from './data/test-data'; 
 
-import PageHeader from './components/organisms/header';
 import "./components/molecules/switcher"
+import "./components/atoms/title"
+
 import Grid from './components/organisms/grid';
 
 
@@ -124,9 +125,7 @@ const App = () => {
 	return (
 		<div class="main">
 			<div class="title">
-				<PageHeader
-					pagetitle={CONFS.APP_TITLE}
-				/>
+				<page-title text={CONFS.APP_TITLE}/>
 			</div>
 			<div class="filter">
 				<sort-switcher
