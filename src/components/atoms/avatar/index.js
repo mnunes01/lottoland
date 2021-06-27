@@ -5,7 +5,9 @@ const Avatar =  ({path = ''}) => {
 
     return(
         <div class={style.avatar}>
-            <div class={style.imgCont}>
+            <div
+                class={style.imgCont}
+            >
                 <img 
                     src={path}
                 />

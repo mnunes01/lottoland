@@ -4,7 +4,7 @@ import style from './style.scss';
 const Info =  ({action = undefined}) => {
 
     return(
-        <div 
+        <div
             class={style.info}
             onClick={action}
         >
