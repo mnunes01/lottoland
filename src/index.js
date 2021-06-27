@@ -7,6 +7,7 @@ import CONFS from './configs';
 import static_gameList from './data/test-data'; 
 
 import "./components/molecules/switcher"
+import "./components/molecules/loader"
 import "./components/atoms/title"
 
 import Grid from './components/organisms/grid';
@@ -123,28 +124,46 @@ const App = () => {
     }, []);
 
 	return (
-		<div class="main">
-			<div class="title">
-				<page-title text={CONFS.APP_TITLE}/>
+		<div class="main" role="grid">
+
+			<div class="title" role="row">
+				<div role="cell">
+					<page-title text={CONFS.APP_TITLE}/>
+				</div>
+				
 			</div>
-			<div class="filter">
-				<sort-switcher
-					options={CONFS.SWITCHER_OPTIONS.filters}
-					title={CONFS.SWITCHER_OPTIONS.title}
-					handleChangeOption={(field, order) => dispatch({type: 'sort', payload: {field, order}})}
-				/>
+
+			<div class="filter" role="row">
+				<div role="cell">
+					<sort-switcher
+						options={CONFS.SWITCHER_OPTIONS.filters}
+						title={CONFS.SWITCHER_OPTIONS.title}
+						handleChangeOption={(field, order) => dispatch({type: 'sort', payload: {field, order}})}
+					/>
+				</div>
 			</div>
-			<hr class="separator"></hr>
+
+			<div role="row">
+				<div role="cell">
+					<hr class="separator"></hr>
+				</div>	
+			</div>
+			
 			{state.isLoaded ?
-				<Grid
-					gameList={state.gameList}
-				/>:
-				<>
-					<div class="loader">
-						<h5>{CONFS.LOADING_MESSAGE}</h5>
-						<progress></progress>
+				<div role="row">
+					<div role="cell">
+						<Grid
+							gameList={state.gameList}
+						/>
 					</div>
-				</>
+				</div>:
+				<div role="row">
+					<div role="cell">
+						<progress-load
+							text={CONFS.LOADING_MESSAGE}
+						/>
+					</div>
+				</div>
 			}
 		</div>
 	)
