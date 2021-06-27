@@ -3,6 +3,16 @@
   "name": "lottoland",
   "version": "0.0.0",
   "license": "MIT",
+  "main": "./src/index.js",
+  "author": "Mario Nunes",
+  "bugs": {
+    "url": "https://github.com/mnunes01/lottoland.git/issues"
+  },
+  "homepage": "https://github.com/mnunes01/lottoland.git#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mnunes01/lottoland.git"
+  },
   "scripts": {
     "build": "preact build",
     "serve": "sirv build --port 8080 --cors --single",
