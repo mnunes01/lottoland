@@ -2,6 +2,27 @@
 
 .card {
 
+    @include responsive_element(432, 138, 272, 108);
+    
+    @include sm {
+        padding: 0 24px;
+    }
+
+    @include lg {
+        padding: 0 21px;
+
+        cta-button {
+            visibility: hidden;
+        }
+
+        .card__content {
+        
+            info-button {
+                visibility: hidden;
+            }
+        }
+    }
+
     cursor: url(../../../assets/icons/cursor.png), auto;
     & * {
         cursor: url(../../../assets/icons/cursor.png), auto !important;
@@ -26,28 +47,6 @@
 
     }
     
-    @include responsive_element(432, 138, 272, 108);
-    
-    @include sm {
-        padding: 0 24px;
-    }
-
-    @include lg {
-        padding: 0 21px;
-
-        cta-button {
-            visibility: hidden;
-        }
-
-        .card__content {
-            border: none;
-
-            info-button {
-                visibility: hidden;
-            }
-        }
-    }
-
     &:hover {
         background-color: $color-casino-base-opaque;
         border-radius: 6px;
@@ -158,5 +157,8 @@
           ;
         }
     }
+    /**
+    * lazy load skeleton end
+    */
 
 }

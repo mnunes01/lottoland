@@ -43,8 +43,7 @@ const Gamecard = ({key, imagePath = '', caption = '', title = '', subtitle = '',
                     }
                 )
                 observer.observe(cardRef)
-            } else {
-                // unsupported browser fallback
+            } else {// unsupported browser fallback
                 setShowCardRef(true)
             }
         }
