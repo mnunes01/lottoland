@@ -1,0 +1,8 @@
+@import "../../../style/core";
+
+.cta {
+    button {
+        @include button_primary;
+        @include label_cta($color-ui-casino-01)
+    }
+}

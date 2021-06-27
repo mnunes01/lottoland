@@ -1,0 +1,31 @@
+@import "../../../style/core";
+
+.details {
+    display: flex;
+    flex-direction: column;
+
+    @include sm {
+        width: 84px;
+    }
+
+    @include lg {
+        width: 146px;    
+    }
+
+    > span {
+        @include label_strong;
+    }
+
+    .title {
+        
+        @include sm {
+            @include truncate_text(18, 2);
+        }
+    
+        @include lg {
+            @include truncate_text(21, 2)
+        }
+    }
+
+
+}

@@ -1,0 +1,105 @@
+//_mixins.scss
+
+@import "breakpoints";
+@import "color";
+@import "typography";
+
+@mixin sm {
+    @media (max-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+ 
+ @mixin lg {
+    @media (min-width: #{$screen-md-min}) {
+        @content;
+    }
+ }
+
+ 
+ @mixin label_cta($color: $color-ui-casino-02) {
+    
+    font-weight: $fontWeightBold;
+    font-style: normal;
+    margin: 2px 0;
+    color: $color;
+    text-transform: uppercase;
+
+    @include sm {
+        font-size: 14px;
+        line-height: 21px;
+    }
+
+    @include lg {
+        font-size: 14px;
+        line-height: 21px;
+    }
+ }
+
+ @mixin label_strong {
+    
+    font-weight: $fontWeightMedium;
+    font-style: normal;
+    margin: 2px 0;
+    color: $color-ui-casino-03;
+    text-transform: capitalize;
+
+    @include sm {
+        font-size: 12px;
+        line-height: 21px;
+    }
+
+    @include lg {
+        font-size: 14px;
+        line-height: 18px;
+    }
+ }
+
+
+ @mixin button_primary {
+    
+    cursor: pointer; 
+    background: $gradient-brand;
+    width: 64px;
+    
+    @include sm {
+        height: 32px;
+        box-shadow: 0px 4px 7px rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+    }
+
+    @include lg {
+        height: 40px;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.16);
+        border-radius: 4px;
+    }
+
+ }
+
+@mixin truncate_text($lineHeight, $maxLines, $units: px) {
+    max-height: $lineHeight * $maxLines + $units;
+    overflow: hidden;    
+}
+
+
+
+@mixin responsive_element($w, $h, $min_w, $min_h, $max_w: null, $max_h: null, $units: px) {
+
+    width: $w + $units;
+    min-width: $min_w + $units;
+    @if ($max_w) {
+        max-width: $max_w + $units;
+    } @else {
+        max-width: 100%;
+    }
+
+    height: $h + $units;
+    min-height: $min_h + $units;
+    @if ($max_h) {
+        max-height: $max_h + $units;
+    } @else {
+        max-height: 100%;
+    }
+    
+}
+

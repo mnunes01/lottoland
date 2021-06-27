@@ -1,0 +1,162 @@
+@import "../../../style/core";
+
+.card {
+
+    cursor: url(../../../assets/icons/cursor.png), auto;
+    & * {
+        cursor: url(../../../assets/icons/cursor.png), auto !important;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $fill-lottoland-white;
+        height: inherit;
+
+        image-avatar {
+            position: relative;
+        }
+        
+        info-button {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+    }
+    
+    @include responsive_element(432, 138, 272, 108);
+    
+    @include sm {
+        padding: 0 24px;
+    }
+
+    @include lg {
+        padding: 0 21px;
+
+        cta-button {
+            visibility: hidden;
+        }
+
+        .card__content {
+            border: none;
+
+            info-button {
+                visibility: hidden;
+            }
+        }
+    }
+
+    &:hover {
+        background-color: $color-casino-base-opaque;
+        border-radius: 6px;
+        cta-button {
+            visibility: visible;
+        }
+
+        .card__content {
+            border: none;
+
+            info-button {
+                visibility: visible;
+            }
+        }
+    }
+      
+    /**
+    // lazy loading skeleton template
+    // with infinite animation
+    */
+    .skeleton {
+
+        @include sm {
+            --blur-width: 50px;
+            width: 422px;
+            min-width: 272px;
+            max-width: 100%;
+            height: 108px;
+            --blur-size: 200px 108px;
+            --avatar-w: 96px;
+            --avatar-h: 72px;
+            --margin: 20px;
+            --avatar-pos-y: 7px;
+            --text-w: 84px;
+            --text-h: 18px;
+            --cta-w: 64px;
+            --cta-h: 32px;
+            border-radius: 4px;
+            
+        }
+    
+        @include lg {
+            --blur-width: 100px;
+            width: 422px;
+            height: 138px;
+            --blur-size: 200px 138px;
+            --avatar-w: 132px;
+            --avatar-h: 96px;
+            --margin: 23px;
+            --avatar-pos-y: 7px;
+            --text-w: 146px;
+            --text-h: 21px;
+            --cta-w: 64px;
+            --cta-h: 40px;
+            border-radius: 5.5px;
+        }
+    
+        background-image:
+            linear-gradient(
+                    90deg, 
+                    rgba(lightgrey, 0) 0, 
+                    rgba(lightgrey, .8) 50%, 
+                    rgba(lightgrey, 0) 100%
+            ),
+            linear-gradient($color-ui-casino-03 var(--avatar-h), transparent 0),
+            linear-gradient($color-ui-casino-03 var(--text-h), transparent 0),
+            linear-gradient($color-ui-casino-03 var(--text-h), transparent 0),
+            linear-gradient($color-ui-casino-03 var(--text-h), transparent 0),
+            linear-gradient($color-ui-casino-03 var(--cta-h), transparent 0),
+            linear-gradient($color-casino-base 100%, transparent 0)
+        ;
+    
+        background-size:
+            var(--blur-size),
+            var(--avatar-w) var(--avatar-w),
+            var(--text-w) var(--text-w),
+            var(--text-w) var(--text-w),
+            var(--text-w) var(--text-w),
+            var(--cta-w) var(--cta-w),
+            100% 100%;  /* card bg */ 
+        ;
+        
+        background-position:
+            -150% 0,
+            var(--margin) var(--margin), /* title */
+            calc(var(--margin) + var(--avatar-w) + var(--margin)) var(--margin),
+            calc(var(--margin) + var(--avatar-w) + var(--margin)) calc(var(--margin) * 1.6 + var(--text-h)),
+            calc(var(--margin) + var(--avatar-w) + var(--margin)) calc(var(--margin) * 3.2 + var(--text-h)),
+            calc(var(--margin) + var(--avatar-w) + var(--margin) + var(--text-w) + var(--margin)) calc(var(--margin) * 2.1),
+            0 0;        /* card bg */ 
+        ;
+    
+        background-repeat: no-repeat;
+        animation: 2s linear 0s infinite alternate loading;
+      
+    }
+    
+    @keyframes loading {
+        to {
+          background-position:
+            250% 0,        
+            var(--margin) var(--margin), /* title */
+            calc(var(--margin) + var(--avatar-w) + var(--margin)) var(--margin),
+            calc(var(--margin) + var(--avatar-w) + var(--margin)) calc(var(--margin) * 1.6 + var(--text-h)),
+            calc(var(--margin) + var(--avatar-w) + var(--margin)) calc(var(--margin) * 3.2 + var(--text-h)),
+            calc(var(--margin) + var(--avatar-w) + var(--margin) + var(--text-w) + var(--margin)) calc(var(--margin) * 2.1),
+            0 0
+          ;
+        }
+    }
+
+}

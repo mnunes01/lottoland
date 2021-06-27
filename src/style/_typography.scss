@@ -1,0 +1,40 @@
+//_typography.scss
+
+$font-stack:    Helvetica, sans-serif;
+
+// Font Weights
+$fontWeightThin: 100;
+$fontWeightRegular: 400;
+$fontWeightMedium: 500;
+$fontWeightBold: 900;
+
+
+body {
+    color: $color-ui-casino-02;
+}
+
+h4, h5 {
+    font-weight: $fontWeightBold;
+    font-style: normal;
+    text-transform: uppercase;
+    margin: 2px 0;
+}
+
+h4 { 
+	line-height: 24px;
+    font-size: 21px;
+}
+
+h5 { 
+    
+    @media (max-width: #{$screen-md-min}) {
+        line-height: 18px;
+        font-size: 12px;
+    }
+
+    @media (min-width: #{$screen-md-min}) {
+        line-height: 21px;
+        font-size: 17px;
+    }
+    
+}

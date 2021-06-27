@@ -1,0 +1,104 @@
+@import "./style/core";
+
+@font-face {
+    font-family: 'icomoon';
+    src:  url('./style/fonts/icomoon.eot?n4rlrs');
+    src:  url('./style/fonts/icomoon.eot?n4rlrs#iefix') format('embedded-opentype'),
+        url('./style/fonts/icomoon.ttf?n4rlrs') format('truetype'),
+        url('./style/fonts/icomoon.woff?n4rlrs') format('woff'),
+        url('./style/fonts/icomoon.svg?n4rlrs#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: $fontWeightRegular;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+html, body {
+	//height: 100%;
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font: 100% $font-stack;
+  	background: $gradient-background;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.main {
+
+	margin-top: 45px;
+	min-width: 320px;
+	display: grid;
+	grid-auto-rows: auto;
+	row-gap: 25px;
+	justify-content: center;
+	height: 100%;
+	
+	@include sm {
+		grid-template-columns: repeat(1, auto);
+	}
+
+	@include lg {
+		grid-template-columns: repeat(1, minmax($screen-md-min, $screen-md-max));
+	}
+
+	.title, .filter {
+		@include lg {
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	}
+
+	.title, .filter {
+		@include sm {
+			margin-left: 24px;
+			margin-right: 24px;
+		}
+	}
+
+	.filter {
+		height: 32px;
+		z-index: 1000;
+	}
+
+	.separator {
+		border: 1px solid $fill-lottoland-white-100;
+		width: 100%;
+		
+	}
+
+	.loader {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		height: inherit;
+		
+		@include label_strong;
+		
+		* {
+			padding: $default_margin;
+		}
+	}
+}
+

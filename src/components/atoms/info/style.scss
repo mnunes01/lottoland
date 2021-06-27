@@ -1,0 +1,21 @@
+@import "../../../style/core";
+
+.info {
+        margin: $default_margin;
+        filter: drop-shadow(0px 1.45833px 1.45833px rgba(0, 0, 0, 0.4));
+        
+        .icon-info {
+            
+            @include sm {
+                font-size: 14px;
+            }
+
+            @include lg {
+                font-size: 20px;     
+            }
+            
+            &::before {
+                content: "\ea0c";
+            }
+        }
+}
