@@ -21,10 +21,12 @@ const formatter = new Intl.NumberFormat(CONFS.DEFAULT_LOCAL, {
 	currency: CONFS.DEFAULT_CURRENCY
 });
 
+
+
 //reducer responsible for our games dataset propagation and manipulation
 // all components / webcomponents are agnostic to data manipualtion and mutations
 // in order to improve render times, and have a single source of true data.
-function reducer(state, action) {
+const reducer = (state, action) => {
 	switch (action.type) {
 		case 'loadData':
 
