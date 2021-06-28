@@ -10,7 +10,6 @@ npm install
 npm run dev
 
 # build for production with minification
-npm run build
 npm run build-no-prerender
 
 # test the production build locally
@@ -38,7 +37,7 @@ Pull the repo and run **npm install**
 
 - **'npm rund dev'** to run development server
 - **'npm run test'** to run JEST tests
-- **'npm run build'** to build the project into 'build' folder
+- **'npm run build-no-prerender'** to build the project into 'build' folder
 - **'npm run gh-pages'** to deploy the build folder to github live pages
 
 
@@ -99,8 +98,7 @@ Open [http://0.0.0.0:8080/](http://0.0.0.0:8080/) to view it in the browser.
 
 Launches the test runner in the interactive watch mode.<br>
 
-### `npm run build`
-### `build-no-prerender`
+### `npm run build-no-prerender`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
