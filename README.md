@@ -43,7 +43,8 @@ The app is configures by a file under src folder
 where is possible to define the filter content for the switcher among other options (self descriptive)
 configuration file: src/config.js
 
-- const CONFS = {
+```javascript
+const CONFS = {
     APP_TITLE: "lottoland games",
     BASE_URL: "https://www.lottoland.com",
     DATA_URL: "https://www.lottoland.com/en_MT/skins/lottoland/js/games/@omni-data/gameconfig.js",
@@ -79,6 +80,7 @@ configuration file: src/config.js
         MAX_GAMES_TO_DISPLAY: false
     }  
 };
+```
 
 ## Available commands
 Package.json contains several scrips that can be run with npm
