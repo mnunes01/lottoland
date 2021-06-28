@@ -1,7 +1,9 @@
 @import "../../../style/core";
 
 .cta {
+    
     button {
+        border: none;
         @include button_primary;
         @include label_cta($color-ui-casino-01)
     }
