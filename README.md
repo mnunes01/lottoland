@@ -10,7 +10,6 @@ npm install
 npm run dev
 
 # build for production with minification
-npm run build
 npm run build-no-prerender
 
 # test the production build locally
@@ -25,6 +24,9 @@ For detailed explanation on how things work, checkout the [CLI Readme](https://g
 # [Lottoland web dev](https://mnunes01.github.io/lottoland/)
 Lottoland web dev 
 
+## The data fetch from the server is untested... if it doenst display games please tweak the fetch on line 120 on index.js
+
+
 # Live Demo
 A working version of this app can be found on [Lottoland web dev]https://mnunes01.github.io/lottoland/)
 
@@ -35,7 +37,7 @@ Pull the repo and run **npm install**
 
 - **'npm rund dev'** to run development server
 - **'npm run test'** to run JEST tests
-- **'npm run build'** to build the project into 'build' folder
+- **'npm run build-no-prerender'** to build the project into 'build' folder
 - **'npm run gh-pages'** to deploy the build folder to github live pages
 
 
@@ -43,7 +45,10 @@ The app is configures by a file under src folder
 where is possible to define the filter content for the switcher among other options (self descriptive)
 configuration file: src/config.js
 
-- const CONFS = {
+```javascript
+const __DEFAULT_CURRENCY = "EUR";
+
+const CONFS = {
     APP_TITLE: "lottoland games",
     BASE_URL: "https://www.lottoland.com",
     DATA_URL: "https://www.lottoland.com/en_MT/skins/lottoland/js/games/@omni-data/gameconfig.js",
@@ -79,6 +84,7 @@ configuration file: src/config.js
         MAX_GAMES_TO_DISPLAY: false
     }  
 };
+```
 
 ## Available commands
 Package.json contains several scrips that can be run with npm
@@ -92,8 +98,7 @@ Open [http://0.0.0.0:8080/](http://0.0.0.0:8080/) to view it in the browser.
 
 Launches the test runner in the interactive watch mode.<br>
 
-### `npm run build`
-### `build-no-prerender`
+### `npm run build-no-prerender`
 
 Builds the app for production to the `build` folder.<br>
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -117,7 +122,7 @@ To solve this, and since the project use Sass, the scss loader should be configu
 
 
 ## Music
-* still at the sound of:
+* typing at the sound of:
 * [the clash - sandinista](https://www.youtube.com/watch?v=BCoAq2299xA)
 * [Keep Calm And Feel The Reggae 2021 (6 Hours)](https://www.youtube.com/watch?v=_zFxtK4EMnA&t=14970s)
 
