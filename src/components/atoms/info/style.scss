@@ -3,6 +3,16 @@
 .info {
         margin: $default_margin;
         filter: drop-shadow(0px 1.45833px 1.45833px rgba(0, 0, 0, 0.4));
+
+        @include sm {
+            width: 15px;
+            height: 15px;
+        }
+
+        @include lg {
+            width: 20px;
+            height: 20px;
+        }
         
         .icon-info {
             

@@ -1,3 +1,4 @@
+import { h} from "preact";
 import register from 'preact-custom-element';
 import style from './style.scss';
 

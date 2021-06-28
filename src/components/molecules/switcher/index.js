@@ -1,3 +1,4 @@
+import { h} from "preact";
 import register from 'preact-custom-element';
 import { useState, useCallback, useRef, useEffect} from 'preact/hooks';
 
@@ -18,7 +19,9 @@ const Switcher = ({options, title = "sort", name = 'sort', handleChangeOption}) 
     }
 
     return(
-        <div 
+        <div
+            role="button"
+            data-testid="switcher-button" 
             ref={containerRef} 
             class={style.switcher}
             onClick={expand}
@@ -47,6 +50,7 @@ const Switcher = ({options, title = "sort", name = 'sort', handleChangeOption}) 
                         <label key={`option_${i}`} class={style.radio}>
                             <span class={style.radio__input}>
                                 <input
+                                    id={`option_${i}`}
                                     checked={isChecked}
                                     type="radio"
                                     name 
@@ -54,7 +58,7 @@ const Switcher = ({options, title = "sort", name = 'sort', handleChangeOption}) 
                                 />
                                 <span class={style.radio__control}></span>
                             </span>
-                            <span class={style.radio__label}>{el.text}</span>
+                            <label htmlFor={`option_${i}`} class={style.radio__label}>{el.text}</label>
                         </label>
 
                     )
@@ -67,4 +71,4 @@ const Switcher = ({options, title = "sort", name = 'sort', handleChangeOption}) 
     );
 };
 
-register(Switcher, 'sort-switcher', ['options', 'title', 'handleChangeOption']);
+register(Switcher, 'sort-switcher', ['options', 'title', 'name', 'handleChangeOption']);

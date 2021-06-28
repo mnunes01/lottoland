@@ -58,6 +58,7 @@ const Gamecard = ({key, imagePath = '', caption = '', title = '', subtitle = '',
 
     return(
         <div
+            data-testid="game-card"
             ref={setCardRef}
             key={key}
             class={style.card}
@@ -67,8 +68,10 @@ const Gamecard = ({key, imagePath = '', caption = '', title = '', subtitle = '',
                 <div class={style.card__content}>
                     <image-avatar 
                         path={imagePath}
+                        alt={title}
                     >
-                    <info-button
+                        <info-button
+                            data-testid="game-card-info"
                             action={infoAction}    
                         />   
                     </image-avatar>
@@ -82,7 +85,7 @@ const Gamecard = ({key, imagePath = '', caption = '', title = '', subtitle = '',
                         action={ctaAction}
                     />
                 </div>:
-                <div class={style.skeleton}></div>
+                <div data-testid="game-card-skeleton" class={style.skeleton}></div>
             }
         </div>
         
