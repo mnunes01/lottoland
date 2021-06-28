@@ -19,3 +19,8 @@ const localStorageMock = (function() {
 Object.defineProperty(window, 'localStorage', {
 	value: localStorageMock
 }); */
+
+const intersectionObserverMock = () => ({
+	observe: () => null
+})
+window.IntersectionObserver = jest.fn().mockImplementation(intersectionObserverMock);
