@@ -47,6 +47,8 @@ where is possible to define the filter content for the switcher among other opti
 configuration file: src/config.js
 
 ```javascript
+const __DEFAULT_CURRENCY = "EUR";
+
 const CONFS = {
     APP_TITLE: "lottoland games",
     BASE_URL: "https://www.lottoland.com",
