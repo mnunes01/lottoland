@@ -25,6 +25,9 @@ For detailed explanation on how things work, checkout the [CLI Readme](https://g
 # [Lottoland web dev](https://mnunes01.github.io/lottoland/)
 Lottoland web dev 
 
+## The data fetch from the server is untested... if it doenst display games please tweak the fetch on line 120 on index.js
+
+
 # Live Demo
 A working version of this app can be found on [Lottoland web dev]https://mnunes01.github.io/lottoland/)
 
