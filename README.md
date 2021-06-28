@@ -119,7 +119,7 @@ To solve this, and since the project use Sass, the scss loader should be configu
 
 
 ## Music
-* still at the sound of:
+* typing at the sound of:
 * [the clash - sandinista](https://www.youtube.com/watch?v=BCoAq2299xA)
 * [Keep Calm And Feel The Reggae 2021 (6 Hours)](https://www.youtube.com/watch?v=_zFxtK4EMnA&t=14970s)
 
